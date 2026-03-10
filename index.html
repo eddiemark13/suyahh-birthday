@@ -5,12 +5,38 @@
 
 <style>
 
+.photos{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+margin-top:20px;
+}
+
+.polaroid{
+background:white;
+padding:10px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.15);
+}
+
+.polaroid img{
+width:150px;
+border-radius:8px;
+}
+
+.caption{
+font-size:12px;
+margin-top:5px;
+color:#555;
+}
+
 body{
 font-family: Arial;
 background: linear-gradient(#e6f7ff,#ffffff);
 text-align:center;
 padding:40px;
-overflow:hidden;
+overflow:auto;
 }
 
 .box{
@@ -126,15 +152,30 @@ animation:float 6s linear infinite;
 
 <p>Hehe ni gambar that I love about us, sorry klau rasa malu but it is what it is.</p>
 
-<img src="pic1.jpg" width="200"><br><br>
-<img src="pic2.jpg" width="200"><br><br>
-<img src="pic3.jpg" width="200">
+<div class="photos">
 
-<br><br>
-<button onclick="next(6)">Next</button>
+<div class="polaroid">
+<img src="pic1.jpg">
+<div class="caption">One of my favourites, our very first one</div>
+</div>
+
+<div class="polaroid">
+<img src="pic2.jpg">
+<div class="caption">Comel</div>
+</div>
+
+<div class="polaroid">
+<img src="pic3.jpg">
+<div class="caption">Hehe</div>
+</div>
 
 </div>
 
+<br>
+
+<button onclick="next(6)">Next</button>
+
+</div>
 
 <div id="slide7" class="box" style="display:none">
 
@@ -190,6 +231,7 @@ setInterval(createHeart,500);
 
 </body>
 </html>
+
 
 
 
